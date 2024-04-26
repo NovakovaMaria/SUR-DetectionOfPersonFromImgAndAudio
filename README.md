@@ -2,7 +2,7 @@
 #### Mária Novákova (xnovak2w), Diana Maxima Držíková (xdrzik01)
 
 The goal of this project is to create classifiers which can detect one specific person in the provided dataset. 
-Two models were created - GMM for audio classification and CNN for image classification. The trained model for GMM is saved in models/GMM/trained. Because of the capacity in the VUT IS, CNN needs to be trained first in order to obtain model (will be generated in /models/CNN/new). The model can be downloaded on: https://nextcloud.fit.vutbr.cz/s/oH4gb8ge4kira7z in models/CNN/trained/. 
+Two models were created - GMM for audio classification and CNN for image classification. 
 
 Predictions for evaluated data: 
 - for images = **models/CNN/trained/predictions_img.txt** 
