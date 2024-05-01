@@ -17,10 +17,12 @@ Three files were created and are handled like this:
 
 ### Training GMM
 
-``` python3.10 trainGMM [--cv]```
+```
+python3.10 trainGMM [--cv]
+```
 
 where:
-- cv = Stands for the bool parameter which allows cross-validation to be executed. If not called, the default is *false*.
+- ```cv``` = Stands for the bool parameter which allows cross-validation to be executed. If not called, the default is *false*.
 
 The models after training are stored in **models/GMM/new** as **gmm_target_model.pkl** and **gmm_nontarget_model.pkl**.
 
@@ -28,19 +30,21 @@ The models after training are stored in **models/GMM/new** as **gmm_target_model
 
 ### Evaluating GMM
 
-``` python3.10 evaluateGMM [--input filepath] [--output filepath] [--target filepath] [--non_target filepath]```
+``` 
+python3.10 evaluateGMM [--input <filepath>] [--output <filepath>] [--target <filepath>] [--non_target <filepath>]
+```
 
 where:
-- input = Input files path that are evaluated. Default *../SUR_projekt2023-2024_eval*.
-- output = Output file path where predictions are stored. Default **../models/GMM/new/predictions_audio.txt**.
-- target = File with parameters of Gaussian for the target. Default *../models/GMM/trained/gmm_target_model.pkl*.
-- non_target = File with parameters of Gaussian for non-target. Default *../models/GMM/trained/gmm_nontarget_model.pkl*.
+- ```input``` = Input files path that are evaluated. Default *../SUR_projekt2023-2024_eval*.
+- ```output``` = Output file path where predictions are stored. Default **../models/GMM/new/predictions_audio.txt**.
+- ```target``` = File with parameters of Gaussian for the target. Default *../models/GMM/trained/gmm_target_model.pkl*.
+- ```non_target``` = File with parameters of Gaussian for non-target. Default *../models/GMM/trained/gmm_nontarget_model.pkl*.
 
 **Put SUR_projekt2023-2024_eval in root folder**.
 
 ### Library for GMM
 
-``` libGMM.py ``` is not supposed to be called on its own. It contains helper functions for training and plotting the results.
+``` libGMM.py ``` is not supposed to be called on it's own. It contains helper functions for training and plotting the results.
 
 ## Image Classifier - CNN
 
@@ -50,10 +54,12 @@ Three files were created and are handled like this:
 
 ### Training CNN
 
-``` python3.10 trainCNN [--threshold float]```
+``` 
+python3.10 trainCNN [--threshold <float>]
+```
 
 where:
-- float = Threshold for hard decision. Default *0.5*.
+- ```float``` = Threshold for hard decision. Default *0.5*.
 
 The models after training are stored in **models/CNN/new** as **model.pth**.
 
@@ -61,13 +67,15 @@ The models after training are stored in **models/CNN/new** as **model.pth**.
 
 ### Evaluating CNN
 
-``` python3.10 evaluateCNN [--input filepath] [--output filepath] [--model filepath] [--threshold float]```
+``` 
+python3.10 evaluateCNN [--input <filepath>] [--output <filepath>] [--model <filepath>] [--threshold <float>]
+```
 
 where:
-- input = Input files path that are evaluated. Default *../SUR_projekt2023-2024_eval*.
-- output = Output file path where predictions are stored. Default **../models/CNN/new/predictions_img.txt**.
-- model = File with CNN model Default *../models/CNN/new/model.pth*.
-- threshold = Threshold for hard decision. Default *0.5*.
+- ```input``` = Input files path that are evaluated. Default *../SUR_projekt2023-2024_eval*.
+- ```output``` = Output file path where predictions are stored. Default **../models/CNN/new/predictions_img.txt**.
+- ```model``` = File with CNN model Default *../models/CNN/new/model.pth*.
+- ```threshold``` = Threshold for hard decision. Default *0.5*.
 
 **Put SUR_projekt2023-2024_eval in root folder**.
 
@@ -75,4 +83,4 @@ where:
 
 ### Library for CNN
 
-``` libCNN.py ``` is not supposed to be called on its own. It contains helper functions for training and plotting the results.
+``` libCNN.py ``` is not supposed to be called on it's own. It contains helper functions for training and plotting the results.
